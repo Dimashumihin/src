@@ -1,37 +1,31 @@
-public class Student {
+import java.util.*;
 
-	private int id;
-	private String name;
-	private List<Course> course;
-
-	/**
-	 * 
-	 * @param name
-	 */
-	public Student(String name) {
-		// TODO - implement Student.Student
-		throw new UnsupportedOperationException();
-	}
-
-	public int getId() {
-		return this.id;
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	/**
-	 * 
-	 * @param course
-	 */
-	public void addCourse(Course course) {
-		// TODO - implement Student.addCourse
-		throw new UnsupportedOperationException();
-	}
-
-	public List<Course> getCourse() {
-		return this.course;
-	}
-
+class Student {
+  
+  private static int count = 0;
+  private int id;
+  private final String name;
+  private ArrayList<Course> courses = new ArrayList<>();
+  
+  public Student(String name) {
+    this.id = ++count;
+    this.name = name;
+  }
+  
+  public int getId() {
+    return this.id;
+  }
+  
+  public String getName() {
+    return name;
+  }
+  
+  public void addCourse(Course course) {
+    courses.add(course);
+  }
+  
+  public ArrayList<Course> getCourses() {
+    return courses;
+  }
+  
 }
