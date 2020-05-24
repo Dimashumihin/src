@@ -57,5 +57,6 @@ class Main {
     
   }
 }
+```
 
 ## [Выполнить программу](https://institution.dmitrysar.repl.run/)
