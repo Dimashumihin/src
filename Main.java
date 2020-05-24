@@ -3,19 +3,19 @@ import java.util.*;
 class Main {
 
   public static void main(String[] args) {
-    Institution institution = new Institution("Институт", "г. Город");
+    Institution institution = new Institution("Институт", "г. Саранск");
     
-    institution.addCourse(new Course("Физика"));
-    institution.addCourse(new Course("Математика"));
-    institution.addCourse(new Course("Информатика"));
+    institution.addCourse(new Course("Химия"));
+    institution.addCourse(new Course("Высшая математика"));
+    institution.addCourse(new Course("программирование"));
 
-    institution.addLecturer(new Lecturer("Физик"));
-    institution.addLecturer(new Lecturer("Математик"));
-    institution.addLecturer(new Lecturer("Информатик Петренко Вениамин Фёдорович"));
+    institution.addLecturer(new Lecturer("Химик Акуленко"));
+    institution.addLecturer(new Lecturer("Математик Логинова"));
+    institution.addLecturer(new Lecturer("Программист Юшин"));
 
-    institution.addStudent(new Student("Иванов Иван Иванович"));
-    institution.addStudent(new Student("Петров Петр Петрович"));
-    institution.addStudent(new Student("Сидоров Сидор Сидорович"));
+    institution.addStudent(new Student("Корчагин Михаил Андреевич"));
+    institution.addStudent(new Student("Родин Вячеслав Альбертович"));
+    institution.addStudent(new Student("Смирнов Максим Денисович"));
 
 
     Student s = institution.getStudent(1);
