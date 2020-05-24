@@ -21,24 +21,17 @@ class Main {
     studentsNames.forEach(name -> institution.addStudent(new Student(name)));
     
     
-    institution.addCourse(new Course("Физика"));
-    institution.addCourse(new Course("Математика"));
-    institution.addCourse(new Course("Информатика"));
+    institution.addCourse(new Course("Химия"));
+    institution.addCourse(new Course("Теория вероятности"));
+    institution.addCourse(new Course("Программирование"));
 
-    institution.addLecturer(new Lecturer("Физик"));
-    institution.addLecturer(new Lecturer("Математик"));
-    institution.addLecturer(new Lecturer("Информатик Петренко Вениамин Фёдорович"));
+    institution.addLecturer(new Lecturer("Химик"));
+    institution.addLecturer(new Lecturer("Логинова"));
+    institution.addLecturer(new Lecturer("Программист"));
 
-    /*
-    institution.addStudent(new Student("Иванов Иван Иванович"));
+    institution.addStudent(new Student("Корчагин Максим Юрьевич"));
     institution.addStudent(new Student("Петров Петр Петрович"));
     institution.addStudent(new Student("Сидоров Сидор Сидорович"));
-    */
-
-    for (int i = 1; i < 4; i++) { 
-      new LecturerForCourseAssigner(institution.getLecturer(i), institution.getCourse(i)).assign();
-      for (int j = 1; j < 4; j++) { 
-        new StudentForCourseAssigner(institution.getStudent(j), institution.getCourse(i)).assign();
       }
     }
 
@@ -57,6 +50,7 @@ class Main {
     
   }
 }
+
 ```
 
 ## [Выполнить программу](https://institution.dmitrysar.repl.run/)
