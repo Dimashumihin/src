@@ -1,4 +1,4 @@
-public class Insyitute {
+public class Institute {
 
 	private String name;
 	private Lecturers list;
