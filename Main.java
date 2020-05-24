@@ -3,7 +3,7 @@ import java.util.*;
 class Main {
 
   public static void main(String[] args) {
-    Institution institution = new Institution("Институт", "г. Саранск");
+    Institution institution = new Institution("Институт", "г. Город");
     
     institution.addCourse(new Course("Химия"));
     institution.addCourse(new Course("Высшая математика"));
@@ -16,6 +16,13 @@ class Main {
     institution.addStudent(new Student("Корчагин Михаил Андреевич"));
     institution.addStudent(new Student("Родин Вячеслав Альбертович"));
     institution.addStudent(new Student("Смирнов Максим Денисович"));
+
+   for (int i = 1; i < 4; i++) { 
+      new LecturerForCourseAssigner(institution.getLecturer(i), institution.getCourse(i)).assign();
+      for (int j = 1; j < 4; j++) { 
+        new StudentForCourseAssigner(institution.getStudent(j), institution.getCourse(i)).assign();
+      }
+    }
 
 
     Student s = institution.getStudent(1);
