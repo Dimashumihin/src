@@ -1,9 +1,10 @@
 # Практическое задание.
-## Пример исполняемого файла:
 
 # Диаграмма классов:
 
 ![class diagram](http://www.plantuml.com/plantuml/png/XLFDRi8m3BxdANniDVe2rOIOq0v8Q3lm15dZeKXfEkLdXo7UVSbSjw4TubJysVxyVNRO-I1TYBqHdP7Umy7we4CC21SG3LZPOmkduBGzfz1e7reuOXUYG-V54vmnlAMQgkOgmauXAhGXmyVKaq2f58EUlYsCG4qz4ort0RKnNfdnnwoW1d45CKhV3z5vpBAPc6YMFZ8jrLObNF_d1Xueptc7_V2D3ymj5qApOl-1xlspI6exvYRNcI3PqsSxGWcPJNFP-bmvnbvgyw8wXzwNkF_2JakZVsJGWotDJcDBgWqJgP9eSuU67TyavvNUVpIlnP2g9emEHKjGQZzGCFddBSCbkTAAzhTwjjqVYQVLFnFbDZ7Utf-vQF11pUTOwIKrH0GLqRT0yIGyZwpgnT2h4FDVR6YQBKzTmjImHFayWdqtN4YV54ybExGgzkON)
+
+## Пример исполняемого файла:
 
 ```Java
 
@@ -25,6 +26,13 @@ class Main {
     institution.addStudent(new Student("Корчагин Михаил Андреевич"));
     institution.addStudent(new Student("Родин Вячеслав Альбертович"));
     institution.addStudent(new Student("Смирнов Максим Денисович"));
+
+   for (int i = 1; i < 4; i++) { 
+      new LecturerForCourseAssigner(institution.getLecturer(i), institution.getCourse(i)).assign();
+      for (int j = 1; j < 4; j++) { 
+        new StudentForCourseAssigner(institution.getStudent(j), institution.getCourse(i)).assign();
+      }
+    }
 
 
     Student s = institution.getStudent(1);
