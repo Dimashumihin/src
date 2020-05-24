@@ -40,4 +40,4 @@ class Main {
 
 ```
 
-## [Выполнить программу](https://institution.dmitrysar.repl.run/)
+## [Выполнить программу](https://repl.it/repls/SecretPrestigiousAddress)
