@@ -8,29 +8,21 @@ import java.util.*;
 
 class Main {
 
-  public static void main(String[] args) throws IOException {
-    Charset charset = Charset.forName("UTF-8");
-    String studentsFileName = "res/students.txt";
-    List<String> studentsNames = Files.readAllLines(Paths.get(studentsFileName), charset);
-    
+  public static void main(String[] args) {
     Institution institution = new Institution("Институт", "г. Город");
     
-    studentsNames.forEach(name -> institution.addStudent(new Student(name)));
-    
-    
     institution.addCourse(new Course("Химия"));
-    institution.addCourse(new Course("Теория вероятности"));
-    institution.addCourse(new Course("Программирование"));
+    institution.addCourse(new Course("Высшая математика"));
+    institution.addCourse(new Course("программирование"));
 
-    institution.addLecturer(new Lecturer("Химик"));
-    institution.addLecturer(new Lecturer("Логинова"));
-    institution.addLecturer(new Lecturer("Программист"));
+    institution.addLecturer(new Lecturer("Химик Акуленко"));
+    institution.addLecturer(new Lecturer("Математик Логинова"));
+    institution.addLecturer(new Lecturer("Программист Юшин"));
 
-    institution.addStudent(new Student("Корчагин Максим Юрьевич"));
-    institution.addStudent(new Student("Петров Петр Петрович"));
-    institution.addStudent(new Student("Сидоров Сидор Сидорович"));
-      }
-    }
+    institution.addStudent(new Student("Корчагин Михаил Андреевич"));
+    institution.addStudent(new Student("Родин Вячеслав Альбертович"));
+    institution.addStudent(new Student("Смирнов Максим Денисович"));
+
 
     Student s = institution.getStudent(1);
     System.out.println();
@@ -42,10 +34,8 @@ class Main {
     
     System.out.println("\nпредмет " + institution.getCourse(3).getName() + " ведёт:");
     System.out.println(institution.getCourse(3).getLecturer().getName());
-    
-    institution.getCourse(3).assignLecturer(institution.getLecturer(3));
-    
   }
+
 }
 
 ```
