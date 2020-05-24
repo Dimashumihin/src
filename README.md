@@ -40,4 +40,5 @@ class Main {
 
 ```
 
-## [Выполнить программу](https://repl.it/repls/SecretPrestigiousAddress/run)
+## [Выполнить программу](/run_dir/junit-4.12.jar:target/dependency
+/* Main)
