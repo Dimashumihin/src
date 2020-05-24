@@ -40,5 +40,4 @@ class Main {
 
 ```
 
-## [Выполнить программу](/run_dir/junit-4.12.jar:target/dependency
-/* Main)
+## [Выполнить программу](https://src.keezzzha.repl.run)
