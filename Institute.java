@@ -1,38 +1,63 @@
-public class Institute {
+import java.util.ArrayList;
 
-	private String name;
-	private Lecturers list;
+class Institution {
 
-	public String getName() {
-		return this.name;
-	}
+  private String name;
+  private String address;
+  private ArrayList<Student> students = new ArrayList<>();
+  private ArrayList<Lecturer> lecturers = new ArrayList<>();
+  private ArrayList<Course> courses = new ArrayList<>();
 
-	public List getStudent() {
-		// TODO - implement Insyitute.getStudent
-		throw new UnsupportedOperationException();
-	}
+  public Institution(String name, String address) {
+    this.name = name;
+    this.address = address;
+  }
 
-	/**
-	 * 
-	 * @param student
-	 */
-	public void addStudent(Student student) {
-		// TODO - implement Insyitute.addStudent
-		throw new UnsupportedOperationException();
-	}
+  public String getName() {
+    return this.name;
+  }
 
-	public List getLecturer() {
-		// TODO - implement Insyitute.getLecturer
-		throw new UnsupportedOperationException();
-	}
+  public String getAddress() {
+    return this.address;
+  }
 
-	/**
-	 * 
-	 * @param lecturer
-	 */
-	public void addLecturer(Lecturer lecturer) {
-		// TODO - implement Insyitute.addLecturer
-		throw new UnsupportedOperationException();
-	}
+  public void addCourse(Course course) {
+    courses.add(course);
+  }
 
+  public void addStudent(Student student) {
+    students.add(student);
+  }
+
+  public void addLecturer(Lecturer lecturer) {
+    lecturers.add(lecturer);
+  }
+
+  public Course getCourse(String name) {
+    return courses.stream().filter(c -> c.getName().equals(name)).findFirst().get();
+  }
+
+  public Course getCourse(int id) {
+    return courses.stream().filter(c -> c.getId() == id).findFirst().get();
+  }
+
+  public ArrayList<Course> getAllCourses() {
+    return this.courses;
+  }
+
+  public Student getStudent(int id) {
+    return students.stream().filter(s -> s.getId() == id).findFirst().get();
+  }
+
+  public ArrayList<Student> getAllStudents() {
+    return students;
+  }
+
+  public Lecturer getLecturer(int id) {
+    return lecturers.stream().filter(l -> l.getId() == id).findFirst().get();
+  }
+
+  public ArrayList<Lecturer> getAllLecturers() {
+    return lecturers;
+  }
 }
