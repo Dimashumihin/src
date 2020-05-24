@@ -40,4 +40,4 @@ class Main {
 
 ```
 
-## [Выполнить программу](https://src.keezzzha.repl.run/)
+## [Выполнить программу](https://src.keezzzha.repl.run)
