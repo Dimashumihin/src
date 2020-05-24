@@ -1,57 +1,40 @@
-public class Course {
+import java.util.*;
 
-	private List Student;
-	private String name;
+class Course {
+  
+  private static int count = 0;
+  private int id;
+  private final String name;
+  private ArrayList<Student> students = new ArrayList<>();
+  private Lecturer lecturer;
+  
+  public Course(String name) {
+    id = ++count;
+    this.name = name;
+  }
 
-	/**
-	 * 
-	 * @param name
-	 */
-	public Course(String name) {
-		// TODO - implement Course.Course
-		throw new UnsupportedOperationException();
-	}
+  public int getId() {
+    return this.id;
+  }
 
-	public String getName() {
-		return this.name;
-	}
+  public String getName() {
+    return this.name;
+  }
+  
+  public void addStudent(Student student) {
+    students.add(student);
+  }
+  
+  public ArrayList<Student> getStudents() {
+    return this.students;
+  }
 
-	/**
-	 * 
-	 * @param student
-	 */
-	public void addStudent(Student student) {
-		// TODO - implement Course.addStudent
-		throw new UnsupportedOperationException();
-	}
+  public void assignLecturer(Lecturer lecturer) {
+    this.lecturer = lecturer;
+  }
 
-	/**
-	 * 
-	 * @param student
-	 */
-	public void removeStudent(Student student) {
-		// TODO - implement Course.removeStudent
-		throw new UnsupportedOperationException();
-	}
-
-	public List getStudent() {
-		// TODO - implement Course.getStudent
-		throw new UnsupportedOperationException();
-	}
-
-	public int getNumberOfStudent() {
-		// TODO - implement Course.getNumberOfStudent
-		throw new UnsupportedOperationException();
-	}
-
-	public void getLecturer() {
-		// TODO - implement Course.getLecturer
-		throw new UnsupportedOperationException();
-	}
-
-	public void assignLecturer() {
-		// TODO - implement Course.assignLecturer
-		throw new UnsupportedOperationException();
-	}
-
+  public Lecturer getLecturer() {
+    return this.lecturer;
+  }
+  
 }
