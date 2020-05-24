@@ -26,11 +26,6 @@ class Main {
     institution.addStudent(new Student("Корчагин Максим Юрьевич"));
     institution.addStudent(new Student("Петров Петр Петрович"));
     institution.addStudent(new Student("Сидоров Сидор Сидорович"));
-
-    for (int i = 1; i < 4; i++) { 
-      new LecturerForCourseAssigner(institution.getLecturer(i), institution.getCourse(i)).assign();
-      for (int j = 1; j < 4; j++) { 
-        new StudentForCourseAssigner(institution.getStudent(j), institution.getCourse(i)).assign();
       }
     }
 
